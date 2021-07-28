@@ -1,0 +1,35 @@
+{
+    "name": "gettonline/pipeit",
+    "description": "The missing pipe operator for PHP 7 and up",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thijs Simonis",
+            "email": "thijs.simonis@gettonline.com"
+        }
+    ],
+    "require": {
+        "php": "^7"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "pestphp/pest": "^1.11"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "GettOnline\\PipeIt\\": "src"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "XDEBUG_MODE=coverage vendor/bin/pest --coverage",
+        "format": "vendor/bin/php-cs-fixer fix ."
+    }
+}
